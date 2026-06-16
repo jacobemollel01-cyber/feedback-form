@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Students Dreams and Aspirations Survey Form</title>
+<style>
+.body {
+    font-family: "Poppins", sans-serif;
+    background: radial-gradient(circle, #ff6a00 0%,#ff4500 30%, #000000 75%);
+    text-align:left;
+    margin: 0;
+    padding: 20px;
+}
+.required::after{
+content:"*";
+color:red;
+}
+
+header {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 700px;
+    margin: 80px auto;   /* wider space around form */
+    padding: 30px;
+    background:background: radial-gradient(circle, #ff6a00 0%,#ff4500 30%, #000000 75%);
+    border: 3px solid #e5e4e2;  /* platinum border */
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align:left;
+}
+
+fieldset {
+    border: 2px solid #006400;   /* Dark green border */
+    background-color: #f5f5f5;   /* Teal background */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+legend {
+    color: #B8860B;
+    font-weight: bold;
+    font size:24px;
+    padding: 0 8px;
+}
+
+label {
+    display:block;
+    margin-top: 10px;
+    color: #333333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #bdbdbd;
+    border-radius: 6px;
+    background-color: #eeeeee;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    background-color:#F9FAFB;
+    border:1px solid #CBD5E1;
+    color:#1F2937;
+    border-radius:6px;
+    padding:10px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    font-size:1rem;
+    padding:0.6rem 1.6rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #0000FF;
+}
+
+button[type="reset"] {
+    background-color: #f8b4b4;
+    color: #660000;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    font-size:1rem;
+    padding:0.6rem 1.6rem;
+}
+
+button[type="reset"]:hover {
+    background-color: #FF0000;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.header {
+    text-align:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    color: #B8860B;  /* red-gold */
+    font-size: 24px;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 25px;
+    text-align: center;
+    background: linear-gradient(to right, #006400, #228B22);
+    color: #FFD700; /* gold text */
+    border-top: 3px solid #e5e4e2;
+    font size:100px
+}
+#yes-option{
+    display:inline-block;
+}
+#no-option{
+    display:inline-block;
+}
+
+
+</style>
+
+</head>
+<body stlye="background: radial-gradient(circle, #ff6a00 0%,#ff4500 30%, #000000 75%);">
+<header>
+<img src="Jacob_Elias_Mollel_logo.svg" alt="Sponsor 3" width="120"><h1 style="font-family:Georgia,serif;">Jacob Companies Associations</h1>
+<div class="header">
+<h2>Students Dreams and Aspirations Form</h2>
+</div>
+<p style="font size:500px;">The purpose of this survey is to gather information about students' career aspirations, educational experiences, and factors that influence their future success. All responses will be used for educational research process.</p>
+</heaader>
+<main>
+<form method="POST" action="https://formspree.io/f/mwvjordd">
+<fieldset>
+<legend>Personal Information</legend>
+<label class="required" for="full-name">Full-Name:</label>
+<input type="text" id="full-name" name="name" placeholder="e.g, John Due" required size="20"/>
+<label class="required" for="email">Email address</label>
+<input type="email" id="email" name="email" Placeholder="e.g, example@email.com" required size="20"/>
+<label class="required" for="age">Age:</label>
+<input type="number" id="age" name="age" required min="4" max="30"/>
+<label class="required" for="class/form">Class/Form:</label>
+<input type="text" id="class/form" name="class/form" placeholder="class six/form two" required size="20"/>
+
+<label class="required" for="gender">Gender:</label>
+<select id="gender" name="gender" required>
+<option value="">Select Gender</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+</select>
+</fieldset>
+<fieldset>
+<legend>Career Goals & Development</legend>
+<label for="dreamcareer">1.What is your Dream Career?</label><br>
+<select id="dreamcareer" name="dreamcareer" onchange="showOther(this.value) required/>
+<option value="">Select Options</option>
+<option value="Health Sciencess">Health Sciences</option>
+<option value="Engineering and Technology">Engineering and Technology</option>
+<option value="Business and Economics">Business and Economics</option>
+<option value="Education">Education</option>
+<option value="Arts and Media">Arts and Media</option>
+<option value="Tourism">Tourism</option>
+<option value="Law, Politics and Governance">Law, Politics and Governace</option>
+<option value="Other">Other</option>
+</select>
+<br><br>
+<div id="other field" style="display:none;">
+label for="othercareer">Please specify:</label><br>
+<input type="text" id="othercareer" name="other career"/>
+</div>
+<script>
+function show other(value){
+if(value=== "other"){
+document.getElementById("other Field").style.display="block";
+}else{
+document.getElementById("other Field").style.display="none";
+}
+}
+</script>
+<label for="dreamreason">2.Why did you choose this Career?</label><br>
+<textarea id="dreamreason" name="dreamreason" rows="4" cols="40"
+ placeholder="Explain your Reasons" required></textarea>
+<label for="interest">3.When did you first become Interested in your Career?</label>
+<input type="text" id="interest" name="interest" required/>
+<label for="achievemnt">4.Do you beleive you can achieve your dream career?</label>
+<label><input type="radio" id="yes-option" name="hotel-stay" value="Yes" required/>Yes</label>
+<label>
+<input type="radio" id="no-option" name="hotel-stay" value="No" required/>No</label>
+
+<label class="required" for="inspirational">5.Who Inspires You to pursue your dream</label>
+<input type="text" id="inspirational" name="inpirational" placeholder="e.g Christiano Ronaldo, Elon Musk" required/>
+<label class="required" for="skills">6.What Skills do you think you need to achieve your dream</label>
+<textarea id="skills" name="skills" rows="5" cols="50" placeholder="List Skills here" required></textarea>
+<label for="challenge">7.What is the biggest challenge preventing you from achieving your dream?</label>
+<textarea id="challenge" name="chellenge" placeholder="Describe the challenges here" rows="4" cols="40" required></textarea>
+</fieldset>
+<fieldset>
+<legend>Character and Education Experiences</legend>
+<label for="teaching">8.Does your Teacher Encourage you to follow your dreams?Explain how?</label>
+<input type="radio" id="yes-option" name="hotel-stay" value="Yes"/>
+<label for="yes-option">Yes</label>
+<input type="radio" id="no-option" name="hotel-stay" value="No"/>
+<label for="no-option">No</label>
+<textarea id="teaching" name="teaching" placeholder="Explain your Reasons Here" rows="4" cols="40" required></textarea>
+<label for="advice">9.What advice would you give other students about achieving thier dreams?</label>
+<textarea id="advice name="advice" placeholder="Put your advice here" rows="4" cols="40" required></textarea>
+<label for="character">10.Describe the characters you have that will help you achieve your dream?</label> 
+<textarea id="character" name="charcter" placeholder="Describe youself here" rows="4" cols="40" required></textarea>
+<label class="required" for="support">11.What support would help you achieve your goals</label>
+<textarea id="support" name="support" placeholder="write your views here" rows="4" cols="40" required></textarea>
+<label for="subjects">12.What are your Three favorite subjects</label><br><br>
+<input type="text" name="subject1" placeholder="Subject 1"><br><br>
+<input type="text" name="subject2" placeholder="Subject 2"><br><br>
+<input type="text" name="subject3" placeholder="Subject 3"><br><br>
+</fieldset>
+<button class="round button" type="submit">Submit Form</button>
+<button type="Reset">Reset Form</button>
+</form>
+<p>We sincerely appreciate your participation in this Survey.Your honest Responses will contribute to understanding students' aspirations and improving educational support. Thank you for your time and cooperation</p>
+<footer>
+    <p>&copy; 2026 Jacob Companies Associations. All rights reserved.</p>
+    <p>Contact: info@jacobcompanies.com | +255 740 368 363</p>
+</footer>
+</main>
+
+</body>
+</html>	
